@@ -4,10 +4,17 @@ import boto3
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('registration_data')
 
+#dynamodb = boto3.resource('dynamodb')
+#table = dynamodb.Table('employees')
+#table.put_item(Item={
+  #  'emp_id': '2',
+  #  'name': 'kammana',
+ #   'salary': 20000
+#})
 
 def lambda_handler(event, context):
     response = table.put_item(
-       item={
+       Item={
            'email':event['email'],
            'name': event['name'],
            'phone': event['phone'],

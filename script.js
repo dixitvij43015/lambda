@@ -19,6 +19,7 @@ function submitForm() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 alert('Registration successful!');
+                alert(document.getElementById('name').value);
                 document.getElementById('name').value = '';
                 document.getElementById('email').value = '';
                 document.getElementById('phone').value = '';
