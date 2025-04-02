@@ -13,6 +13,7 @@ def lambda_handler(event, context):
            'phone': event['phone'],
            'password': event['password']
        }
+
     )
 
     return{
